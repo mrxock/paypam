@@ -1,0 +1,62 @@
+.header{
+  margin-top: 40px;
+}
+.header__inner {
+  @include flex(space-between,center);
+}
+.header__wrpper {
+  @include flex(start,center)
+}
+.site-logo {
+  width: 135px;
+  height: 38px;
+}
+
+.button {
+  padding: 16px 24.5px 14px 26.5px;
+  color: $waterWhite;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.115385px;
+  background-color: $darkPink;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  border-radius: 24px;
+  border: none;
+}
+.button:hover{
+  background-color: rgba(201, 77, 126, 0.5);
+}
+.button:active{
+  background-color: $charmPink;
+}
+.header__gamburger-btn{
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+// responsive
+@include breakpoint(tablet){
+  body{
+    background-position: calc(50% + 9px) calc(50% - 163px);
+  }
+}
+@include breakpoint(phablet){
+  .header__nav__list{
+    padding-left: 0;
+  }
+  .header__nav{
+    margin-left: 0;
+  }
+  .header__button{
+    padding: 9px 16.5px 8px 15.5px;
+  }
+}
+@include breakpoint(justmobile){
+  .header__gamburger-btn{
+    display: block;
+  }
+  .header__button{
+    display: none;
+  }
+}

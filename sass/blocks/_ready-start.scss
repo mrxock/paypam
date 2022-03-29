@@ -1,0 +1,54 @@
+.ready-start {
+  padding-top: 96px;
+}
+.ready-start__inner {
+  @include flex(space-between,center)
+}
+.ready-start__title {
+  margin: 0;
+  font-family: 'DM Serif Display';
+  font-size: 48px;
+  line-height: 56px;
+  color: $sanJuanBlue;
+}
+.form__inp{
+  outline: none;
+}
+.form__inp:focus{
+  box-shadow: 0 0 2px $sanJuanBlue;
+}
+// responsive
+@include breakpoint(tablet){
+  .ready-start__title{
+    margin-bottom: 40px;
+  }
+  .ready-start__inner{
+    flex-direction: column;
+  }
+  .button{
+    left: 266px;
+  }
+  .ready_inp{
+    padding: 16px 220px 14px 27px;
+  }
+}
+@include breakpoint(justmobile){
+  .ready-start__title{
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .button{
+    left: 73px;
+  }
+  .ready_inp {
+    padding: 16px 150px 14px 27px;
+}
+}
+@include breakpoint(mobilesemi){
+  .ready_inp {
+    padding: 16px 93px 14px 27px;
+} 
+.button{
+  left: 52px;
+}
+}

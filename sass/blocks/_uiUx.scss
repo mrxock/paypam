@@ -1,0 +1,74 @@
+.ui-ux {
+  padding-top: 150px;
+  background-repeat: no-repeat;
+  background-image: url(../../img/bgabout.png);
+  background-position: calc(50% + 698px) 48px;
+}
+.ui-ux__inner {
+  @include flex(space-between,center);
+}
+.ui-ux__content {
+  max-width: 445px;
+}
+.ui-ux__title {
+  font-family: 'DM Serif Display';
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.369231px;
+  color: $sanJuanBlue;
+}
+.ui-ux__subtitle {
+  margin-top: 24px;
+  font-size: 15px;
+  line-height: 28px;
+  color: $lightSanBlue;
+}
+.ui-ux__imgs {
+  @include flex(center,center);
+}
+.ui-ux__img {
+  border-radius: 30px;
+}
+.ui-ux__img ~ .ui-ux__img{
+  margin-left: 40px;
+}
+
+
+@include breakpoint(desktop){
+  .ui-ux__inner{
+    flex-direction: column-reverse;
+  }
+  .ui-ux__content{
+    text-align: center;
+  }
+}
+@include breakpoint(tablet){
+  .ui-ux{
+    padding-top: 100px;
+    background-image: none;
+  }
+  .ui-ux__img ~ .ui-ux__img{
+    margin-left: 25px;
+  }
+  .ui-ux__img{
+    width: 168.32px;
+    height: 360px;
+  }
+}
+@include breakpoint(uniquemobile){
+  .ui-ux{
+    padding-top: 80px;
+  }
+  .ui-ux__img{
+    width: 152px;
+    height: 290px;
+  }
+  .ui-ux__img ~ .ui-ux__img{
+    margin-left: 21px;
+
+  }
+  .ui-ux__title{
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

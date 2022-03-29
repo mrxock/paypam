@@ -1,0 +1,49 @@
+
+.implement__inner {
+  padding-top: 150px;
+  @include flex(space-between,center);
+}
+.implement__content {
+  max-width: 445px;
+}
+.implement__title {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;  
+  letter-spacing: -0.369231px;
+  color: $sanJuanBlue;
+}
+.implement__subtitle {
+  margin-top: 24px;
+  font-size: 15px;
+  line-height: 28px;
+  color: $lightSanBlue;
+}
+@include breakpoint(desktop){
+  .implement__inner{
+    padding-top: 100px;
+    flex-direction: column;
+  }
+  .implement__content{
+    text-align: center;
+  }
+  .implement__subtitle{
+    max-width: 573px;
+  }
+}
+@include breakpoint(justmobile){
+  .implement__img{
+    max-width: 391px;
+  }
+}
+@include breakpoint(uniquemobile){
+  .implement__inner{
+    padding-top: 80px;
+  }
+  .implement__img{
+    max-width: 320px;
+    height: 220px;
+  }
+}

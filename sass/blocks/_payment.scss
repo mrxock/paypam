@@ -1,0 +1,59 @@
+.payments {
+  padding-top: 146px;
+}
+.payments__inner {
+  @include flex(center,center);
+}
+.wrapper {
+  max-width: 340px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper ~ .wrapper{
+  margin-left: 30px;
+}
+.payments__img {
+  width: 106px;
+  height: 106px;
+}
+.payments__title {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.138462px;
+  color: $sanJuanBlue;
+}
+.payments__subtitle {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: $lightSanBlue;
+}
+// responsive
+@include breakpoint(desktop){
+  .payments__inner{
+    justify-content: space-between;
+  }
+  .wrapper{
+    max-width: 223px;
+  }
+  .wrapper ~ .wrapper{
+    margin-left: 10px;
+  }
+}
+@include breakpoint(tablet){
+  .payments__inner{
+    flex-direction: column;
+  }
+  .wrapper{
+    max-width: 435px;
+  }
+}
+@include breakpoint(uniquemobile){
+  .wrapper{
+    max-width: 320px;
+  }
+}
